@@ -1,0 +1,39 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+
+    networks:
+      - dsdeliver-net
+    container_name: postgres-dsdeliver
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=1234567
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=dsdeliver
+  pgadmin:
+    image: dpage/pgadmin4:latest
+
+    networks:
+      - dsdeliver-net
+    container_name: pgadmin-dsdeliver
+    volumes:
+      - pgadmin-pg:/var/lib/pgadmin
+    expose:
+      - 15432
+    ports:
+      - 15432:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@teste.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+networks:
+  dsdeliver-net:
+
+volumes:
+  postgres-db:
+  pgadmin-pg:
