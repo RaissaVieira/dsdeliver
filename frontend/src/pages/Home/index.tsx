@@ -1,7 +1,8 @@
 import React from "react";
 import "./styles.css";
 import { ReactComponent as Main } from "../../assets/main.svg"
-import Footer from "../Footer";
+import Footer from "../../Components/Footer";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -11,13 +12,13 @@ function Home() {
                     <div className="home-actions">
                         <h1 className="home-title">
                             Faça seu pedido <br /> que entregamos <br /> pra você!!!
-                    </h1>
+                        </h1>
                         <h3 className="home-subtitle">
                             Escolha o seu pedido e em poucos minutos <br /> levaremos na sua porta
-                    </h3>
-                        <a href="" className="home-btn-order">
+                        </h3>
+                        <Link to="/orders" className="home-btn-order">
                             FAZER PEDIDO
-                    </a>
+                        </Link>
                     </div>
                     <div className="home-image">
                         <Main />
