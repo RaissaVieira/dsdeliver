@@ -4,13 +4,13 @@ Projeto desenvolvido durante a Segunda Semana DEVSuperior.
 
 ### Tecnologias utilizadas
 
-1. Docker-compose
+**1.** Docker-compose
 
-2. Spring boot e Spring Data
+**2.**  Spring boot e Spring Data
 
-3. React
+**3.**  React
 
-4. Banco de dados: Postgresql
+**4.**  Banco de dados: Postgresql
 
 ### Projeto no ar
 
